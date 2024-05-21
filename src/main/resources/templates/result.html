@@ -1,16 +1,17 @@
+<!-- result.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Game</title>
+    <title>Typing Game - Result</title>
 </head>
 <body>
+    <p>Score: <span th:text="${score}"></span></p>
+    <p>Miss: <span th:text="${miss}"></span></p>
     <form action="/check" method="post">
         <input type="text" name="userInput">
         <button type="submit">Submit</button>
     </form>
-    <p th:text="${message}"></p>
 </body>
 </html>

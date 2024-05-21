@@ -2,31 +2,39 @@ package com.example.aaaaaa;
 
 import java.util.Scanner;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Typing {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		String[] words = { "apple", "banana", "orange", "grape", "melon" };
-		int score = 0;
-		int miss = 0;
+    private String[] words = {"apple", "banana", "orange", "grape", "melon"};
+    private int score = 0;
+    private int miss = 0;
+    private Scanner scanner = new Scanner(System.in);
 
-		while (true) {
-			String word = words[(int) (Math.random() * words.length)];
-			System.out.println(word);
-			String input = scanner.nextLine();
+    public String getRandomWord() {
+        return words[(int) (Math.random() * words.length)];
+    }
 
-			if (input.equals("q")) {
-				break;
-			}
+    public void checkInput(String input) {
+        if (input.equals("q")) {
+            return;
+        }
 
-			if (input.equals(word)) {
-				score++;
-			} else {
-				miss++;
-				System.out.println("Miss");
-			}
-		}
+        String word = getRandomWord();
+        System.out.println(word); // コンソールに表示する代わりに、ビューに表示するためにこの行をコメントアウトします。
 
-		System.out.println("score: " + score);
-		System.out.println("miss:"+ miss);
-	}
+        if (input.equals(word)) {
+            score++;
+        } else {
+            miss++;
+        }
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public int getMiss() {
+        return miss;
+    }
 }

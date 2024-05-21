@@ -4,17 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Game</title>
+    <title>Typing Game - Checker</title>
 </head>
 <body>
-    <h1>Typing Game</h1>
-    <p>Type the following sentence:</p>
-    <p th:text="${sentence}"></p>
-    <form action="/check" method="post">
-        <input type="hidden" name="correctSentence" th:value="${sentence}">
-        <input type="text" name="userInput">
-        <button type="submit">Submit</button>
-    </form>
-    <p th:text="${message}"></p>
+    <p th:text="${a}"></p>
 </body>
 </html>
