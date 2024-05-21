@@ -11,6 +11,7 @@
     <p>Type the following sentence:</p>
     <p th:text="${sentence}"></p>
     <form action="/check" method="post">
+        <input type="hidden" name="correctSentence" th:value="${sentence}">
         <input type="text" name="userInput">
         <button type="submit">Submit</button>
     </form>
