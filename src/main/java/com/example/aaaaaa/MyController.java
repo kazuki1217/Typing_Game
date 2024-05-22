@@ -22,13 +22,13 @@ public class MyController {
     	return "index";
     }
     
-    @PostMapping("/check")
+    @PostMapping("/typing")
     public String check(@RequestParam("userInput") String userInput, Model model) {
 //    	userInputは入力した値
     	typing.checkInput(userInput);
         model.addAttribute("score", typing.getScore());
         model.addAttribute("miss", typing.getMiss());
         model.addAttribute("word", typing.getWord());
-        return "result";
+        return "typing";
     }
 }
