@@ -1,35 +1,37 @@
 @charset "UTF-8";
 
-p {
-	font-size: 35px;
-	text-align: center;
-    margin-bottom: 10px; /* スコアとミスの間隔を狭める */
-	font-weight: bold;
+body, html {
+    text-align: center; /* 中央揃え */
 }
 
+p {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px; /* スコアとミスの間隔を狭める */
+    font-weight: bold;
+}
 
 form {
     width: fit-content;
     margin: auto;
-
 }
 
 #userInput {
-	width: 400px;
-	height: 40px;
-	margin-top:10px;
-	text-align: center;
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
     font-size: 30px;
-    font-weight:bold /* 任意の大きさに調整 */
+    font-weight: bold; /* 任意の大きさに調整 */
 }
 
 .result_top_space {
-	margin-top: 121px;
-	
+    margin-top: 121px;
 }
 
 a {
-	font-size: 35px;
     display: block; /* ブロック要素に変更 */
-    margin: 0 auto; /* 水平方向に中央揃え */	font-weight: bold;
+    margin: 0 auto; /* 水平方向に中央揃え */
+    font-size: 35px;
+    font-weight: bold;
 }
