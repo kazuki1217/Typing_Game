@@ -4,10 +4,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Typing {
-//	private String[] words = { "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|",
-//			";", ":", "\"", "'" };
+	private String[] words = { "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|",
+			";", ":", "\"", "'" };
 	private String word = "aaaa";
-	private String[] words = { "banana", "apple"};
 	private int score = 0;
 	private int miss = 0;
 
@@ -16,24 +15,19 @@ public class Typing {
 	}
 
 	public void checkInput(String input) {
-//	    if (input.equals("q")) {
-//	        return;
-//	    }
-		
-	    String word = getRandomWord();
-	    setWord(word);
-	    
-	    System.out.println(word); // コンソールに表示する代わりに、ビューに表示するためにこの行をコメントアウトします。
+		//	    if (input.equals("q")) {
+		//	        return;
+		//	    }
 
-	    if (input.equals(word)) {
-	        score++; // 入力が正しい場合にスコアをインクリメント
-	    } else {
-	        miss++;
-	    }
+		if (input.equals(word)) {
+			score++; // 入力が正しい場合にスコアをインクリメント
+		} else {
+			miss++;
+		}
+		String word = getRandomWord();
+		setWord(word);
 	}
 
-	
-	
 	public void setWord(String word) {
 		this.word = word;
 	}

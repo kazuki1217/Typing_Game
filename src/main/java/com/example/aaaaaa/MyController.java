@@ -14,6 +14,7 @@ public class MyController {
     private Typing typing;
   
 
+   
     @GetMapping("/")
     public String index(Model model) {
     	model.addAttribute("word", typing.getWord());
