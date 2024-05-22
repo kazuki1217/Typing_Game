@@ -17,13 +17,15 @@ public class MyController {
    
     @GetMapping("/")
     public String index(Model model) {
+//    	初期値aaaaが表示
     	model.addAttribute("word", typing.getWord());
     	return "index";
     }
     
     @PostMapping("/check")
     public String check(@RequestParam("userInput") String userInput, Model model) {
-        typing.checkInput(userInput);
+//    	userInputは入力した値
+    	typing.checkInput(userInput);
         model.addAttribute("score", typing.getScore());
         model.addAttribute("miss", typing.getMiss());
         model.addAttribute("word", typing.getWord());

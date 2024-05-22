@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class Typing {
 	private String[] words = { "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|",
 			";", ":", "\"", "'" };
-	private String word = "aaaa";
+	private String word = "記号";
 	private int score = 0;
 	private int miss = 0;
 
@@ -14,12 +14,12 @@ public class Typing {
 		return words[(int) (Math.random() * words.length)];
 	}
 
-	public void checkInput(String input) {
+	public void checkInput(String userInput) {
 		//	    if (input.equals("q")) {
 		//	        return;
 		//	    }
 
-		if (input.equals(word)) {
+		if (userInput.equals(word)) {
 			score++; // 入力が正しい場合にスコアをインクリメント
 		} else {
 			miss++;
