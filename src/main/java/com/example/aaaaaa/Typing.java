@@ -13,6 +13,12 @@ public class Typing {
 	public String getRandomWord() {
 		return words[(int) (Math.random() * words.length)];
 	}
+	
+    public void reset() {
+        score = 0;
+        miss = 0;
+        // 他の初期化処理があればここで行う
+    }
 
 	public void checkInput(String userInput) {
 		//	    if (input.equals("q")) {
