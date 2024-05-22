@@ -36,7 +36,7 @@ public class MyController {
 		model.addAttribute("score", typing.getScore());
 		model.addAttribute("miss", typing.getMiss());
 		model.addAttribute("word", typing.getWord());
-		if ((typing.getScore() + typing.getMiss()) <= 16) {
+		if ((typing.getScore() + typing.getMiss()) < 30) {
 			return "typing";
 		} else {
 			return "result";
@@ -44,10 +44,4 @@ public class MyController {
 		}
 	}
 
-	@GetMapping("/result")
-	public String result(Model model) {
-		model.addAttribute("score", typing.getScore());
-		model.addAttribute("miss", typing.getMiss());
-		return "result";
-	}
 }
