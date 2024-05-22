@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
 p {
-	font-size: 40px;
+	font-size: 35px;
 	text-align: center;
+    margin-bottom: 10px; /* スコアとミスの間隔を狭める */
 
 }
 
@@ -15,14 +16,13 @@ form {
 
 #userInput {
 	width: 200px;
-	height: 30px;
+	height: 40px;
+	margin-top:10px;
 	text-align: center;
-
+    font-size: 30px; /* 任意の大きさに調整 */
 }
 
-button[type="submit"] {
-	width: 100px;
-	height: 40px;
-	text-align: center;
-
+.result_top_space {
+	margin-top: 121px;
+	
 }

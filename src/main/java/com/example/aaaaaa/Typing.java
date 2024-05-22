@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class Typing {
 	private String[] words = { "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|",
 			";", ":", "\"", "'" };
-	private String word = "記号";
+	private String word = "@";
 	private int score = 0;
 	private int miss = 0;
 
