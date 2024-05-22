@@ -5,13 +5,14 @@
 	<meta charset="UTF-8">
 	<title>Result</title>
 	<link rel="stylesheet" href="/index.css">
+	
 </head>
 
 <body>
 	<p>FINISH</p>
 	<p>Score： <span th:text="${score}"></span></p>
 	<p>Miss： <span th:text="${miss}"></span></p>
-
+	<p>経過時間: <span th:text="${elapsedTime}"></span>秒</p> <!-- 経過時間を表示 -->
 	<a href="/">RESTART</a>
 </body>
 

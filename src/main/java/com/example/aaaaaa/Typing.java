@@ -10,6 +10,7 @@ public class Typing {
 	private int score = 0;
 	private int miss = 0;
 
+
 	public String getRandomWord() {
 		return words[(int) (Math.random() * words.length)];
 	}
