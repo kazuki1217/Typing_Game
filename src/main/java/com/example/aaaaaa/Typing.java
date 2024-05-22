@@ -24,8 +24,18 @@ public class Typing {
 		} else {
 			miss++;
 		}
-		String word = getRandomWord();
-		setWord(word);
+
+		if ((score + miss) % 10 == 0) { // スコアとミスの合計値が3で割り切れる場合
+			String[] home = { "Set home position", "Return to home position", "Reset to home position",
+					"Back to starting point", "Revert to home position", "Position reset to home",
+					"Restore default position", "Set cursor to home", "Recenter to home position",
+					"Position reset to default" };
+			int randomIndex = (int) (Math.random() * home.length);
+			setWord(home[randomIndex]); // homeからランダムな値を選んでセット
+		} else {
+			String newWord = getRandomWord(); // ランダムな単語を取得
+			setWord(newWord);
+		}
 	}
 
 	public void setWord(String word) {

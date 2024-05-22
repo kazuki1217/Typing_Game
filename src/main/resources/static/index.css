@@ -4,7 +4,7 @@ p {
 	font-size: 35px;
 	text-align: center;
     margin-bottom: 10px; /* スコアとミスの間隔を狭める */
-
+	font-weight: bold;
 }
 
 
@@ -15,11 +15,12 @@ form {
 }
 
 #userInput {
-	width: 200px;
+	width: 400px;
 	height: 40px;
 	margin-top:10px;
 	text-align: center;
-    font-size: 30px; /* 任意の大きさに調整 */
+    font-size: 30px;
+    font-weight:bold /* 任意の大きさに調整 */
 }
 
 .result_top_space {
