@@ -34,11 +34,11 @@ public class MyController {
 
 		}
 	}
-	
+
 	@GetMapping("/result")
 	public String result(Model model) {
-		model.addAttribute("score",typing.getScore());
-		model.addAttribute("miss",typing.getMiss());
+		model.addAttribute("score", typing.getScore());
+		model.addAttribute("miss", typing.getMiss());
 		return "result";
 	}
 }

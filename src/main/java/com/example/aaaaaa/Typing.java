@@ -13,18 +13,15 @@ public class Typing {
 	public String getRandomWord() {
 		return words[(int) (Math.random() * words.length)];
 	}
-	
-    public void reset() {
-        score = 0;
-        miss = 0;
-        word = "@";
-        // 他の初期化処理があればここで行う
-    }
+
+	public void reset() {
+		score = 0;
+		miss = 0;
+		word = "@";
+
+	}
 
 	public void checkInput(String userInput) {
-		//	    if (input.equals("q")) {
-		//	        return;
-		//	    }
 
 		if (userInput.equals(word)) {
 			score++; // 入力が正しい場合にスコアをインクリメント
@@ -33,12 +30,12 @@ public class Typing {
 		}
 
 		if ((score + miss) % 10 == 0) { // スコアとミスの合計値が3で割り切れる場合
-			String[] home = { "Set home position", "Return to home position", "Reset to home position",
+			String[] homePosition = { "Set home position", "Return to home position", "Reset to home position",
 					"Back to starting point", "Revert to home position", "Position reset to home",
 					"Restore default position", "Set cursor to home", "Recenter to home position",
 					"Position reset to default" };
-			int randomIndex = (int) (Math.random() * home.length);
-			setWord(home[randomIndex]); // homeからランダムな値を選んでセット
+			int randomIndex = (int) (Math.random() * homePosition.length);
+			setWord(homePosition[randomIndex]); // homeからランダムな値を選んでセット
 		} else {
 			String newWord = getRandomWord(); // ランダムな単語を取得
 			setWord(newWord);
