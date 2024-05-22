@@ -17,6 +17,7 @@ public class Typing {
     public void reset() {
         score = 0;
         miss = 0;
+        word = "@";
         // 他の初期化処理があればここで行う
     }
 

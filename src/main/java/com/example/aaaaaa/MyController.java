@@ -27,7 +27,7 @@ public class MyController {
 		model.addAttribute("score", typing.getScore());
 		model.addAttribute("miss", typing.getMiss());
 		model.addAttribute("word", typing.getWord());
-		if ((typing.getScore() + typing.getMiss()) <= 4) {
+		if ((typing.getScore() + typing.getMiss()) <= 16) {
 			return "typing";
 		} else {
 			return "result";
