@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing</title>
+	<meta charset="UTF-8">
+	<title>Typing</title>
 	<link rel="stylesheet" href="/index.css">
 
-    <script>
-        window.onload = function() {
-            document.getElementById('userInput').focus();
-        }
-    </script>
+	<script>
+		window.onload = function () {
+			document.getElementById('userInput').focus();
+		}
+	</script>
 </head>
+
 <body>
-    <p>次の記号を入力して下さい</p>
-	<p th:text = "${word}"></p>
-    <form action="/typing" method="post">
-        <input type="text" id="userInput" name="userInput">
-    </form>
+	<p>次の記号を入力して下さい</p>
+	<p th:text="${word}"></p>
+	<form action="/typing" method="post">
+		<input type="text" id="userInput" name="userInput">
+	</form>
 </body>
+
 </html>

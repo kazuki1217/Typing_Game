@@ -27,3 +27,9 @@ form {
 	margin-top: 121px;
 	
 }
+
+a {
+	font-size: 35px;
+    display: block; /* ブロック要素に変更 */
+    margin: 0 auto; /* 水平方向に中央揃え */	font-weight: bold;
+}

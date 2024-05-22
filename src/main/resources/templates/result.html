@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Result</title>
+	<link rel="stylesheet" href="/index.css">
 </head>
+
 <body>
- <h1>おわり</h1>
- <a href="/">index.htmlへ遷移</a>
+	<p>おわり</p>
+	<p>Score： <span th:text="${score}"></span></p>
+	<p>Miss： <span th:text="${miss}"></span></p>
+
+	<a href="/">RESTART</a>
 </body>
+
 </html>

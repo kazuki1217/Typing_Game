@@ -1,25 +1,26 @@
-<!-- result.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Game - Result</title>
+	<meta charset="UTF-8">
+	<title>Typing</title>
 	<link rel="stylesheet" href="/index.css">
 
 	<script>
-	    window.onload = function() {
-	        document.getElementById('userInput').focus();
-	    }
+		window.onload = function () {
+			document.getElementById('userInput').focus();
+		}
 	</script>
 </head>
+
 <body>
 	<p class="result_top_space" th:text="${word}"></p>
-    <form action="/typing" method="post">
-        <input type="text" id="userInput" name="userInput">
-    </form>
+	<form action="/typing" method="post">
+		<input type="text" id="userInput" name="userInput">
+	</form>
 	<p>
 	<p>Score: <span th:text="${score}"></span></p>
 	<p>Miss: <span th:text="${miss}"></span></p>
 </body>
+
 </html>
