@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Result</title>
 	<link rel="stylesheet" href="/index.css">
-	
+	<link rel="stylesheet" href="/table.css">
 </head>
 
 <body>
@@ -14,6 +14,20 @@
 	<p>Miss： <span th:text="${miss}"></span></p>
 	<p>経過時間: <span th:text="${elapsedTime}"></span>秒</p> <!-- 経過時間を表示 -->
 	<a href="/">RESTART</a>
+	<h2>今までの成績一覧表</h2>
+	<table>
+		<tr>
+			<th>正解</th>
+			<th>不正解</th>
+			<th>時間</th>
+		</tr>
+		<tr th:each="result :${results}">
+			<td th:text="${result.score}"></td>
+			<td th:text="${result.miss}"></td>
+			<td th:text="${result.elapsedTime}"></td>
+
+		</tr>
+	</table>
 </body>
 
 </html>
