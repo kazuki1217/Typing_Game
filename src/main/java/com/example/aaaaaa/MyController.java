@@ -22,8 +22,8 @@ public class MyController {
 	@GetMapping("/")
 	public String index(Model model) {
 		typing.reset();	
-		model.addAttribute("word", typing.getWord()); 
 		stopWatch.start();
+		model.addAttribute("word", typing.getWord()); 
 		return "index";
 	}
 
@@ -38,14 +38,14 @@ public class MyController {
 		} else {
 			
 			stopWatch.stop();
-			model.addAttribute("elapsedTime", stopWatch.getElapsedTime() / 1000);
+			model.addAttribute("elapsedTime", stopWatch.getElapsedTime());
 			
 			GameResult gameresult = new GameResult();
 			gameresult.setScore(typing.getScore());
 			gameresult.setMiss(typing.getMiss());
 			System.out.println((stopWatch.getElapsedTime()));
 
-			gameresult.setElapsedTime(stopWatch.getElapsedTime() / 1000);
+			gameresult.setElapsedTime(stopWatch.getElapsedTime());
 			gameResultRepository.save(gameresult);
 			model.addAttribute("results", gameResultRepository.findAll());
 			return "result";
