@@ -2,6 +2,9 @@ package com.example.aaaaaa;
 
 import org.springframework.stereotype.Component;
 
+import lombok.Data;
+
+@Data
 @Component
 public class StopWatch {
     private long startTime;
