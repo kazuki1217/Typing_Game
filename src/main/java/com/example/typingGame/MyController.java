@@ -1,4 +1,4 @@
-package com.example.aaaaaa;
+package com.example.typingGame;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

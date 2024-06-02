@@ -1,4 +1,4 @@
-package com.example.aaaaaa;
+package com.example.typingGame;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

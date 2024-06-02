@@ -1,13 +1,13 @@
-package com.example.aaaaaa;
+package com.example.typingGame;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AaaaaaApplication {
+public class TypingGameApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AaaaaaApplication.class, args);
+		SpringApplication.run(TypingGameApplication.class, args);
 	}
 
 }
