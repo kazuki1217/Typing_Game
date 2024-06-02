@@ -21,9 +21,9 @@ public class MyController {
 
 	@GetMapping("/")
 	public String index(Model model) {
-		typing.reset();	
+		typing.reset();
 		stopWatch.start();
-		model.addAttribute("word", typing.getWord()); 
+		model.addAttribute("word", typing.getWord());
 		return "index";
 	}
 
@@ -36,17 +36,17 @@ public class MyController {
 		if ((typing.getScore() + typing.getMiss()) < 11) {
 			return "typing";
 		} else {
-			
+
+//			経過時間をビューへ送る
 			stopWatch.stop();
 			model.addAttribute("elapsedTime", stopWatch.getElapsedTime());
-			
-			GameResult gameresult = new GameResult();
-			gameresult.setScore(typing.getScore());
-			gameresult.setMiss(typing.getMiss());
-			System.out.println((stopWatch.getElapsedTime()));
 
-			gameresult.setElapsedTime(stopWatch.getElapsedTime());
-			gameResultRepository.save(gameresult);
+//			gameResultエンティティにスコア、ミス、経過時間の情報を送り、DBへ保存
+			GameResult gameResult = new GameResult(null, typing.getScore(), typing.getMiss(),
+					stopWatch.getElapsedTime());
+			gameResultRepository.save(gameResult);
+			
+//			全てのスコア、ミス、経過時間の情報をビューへ送る
 			model.addAttribute("results", gameResultRepository.findAll());
 			return "result";
 
